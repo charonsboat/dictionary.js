@@ -1,0 +1,31 @@
+{
+  "name": "@drmyersii/dictionary.js",
+  "version": "0.0.0",
+  "description": "A sortable Dictionary data structure for JavaScript (or Node).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drmyersii/dictionary.js.git"
+  },
+  "keywords": [
+    "sortable",
+    "dictionary",
+    "data",
+    "structure"
+  ],
+  "author": "David R. Myers II <davidrmyersii@gmail.com> (https://drm2.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drmyersii/dictionary.js/issues"
+  },
+  "homepage": "https://github.com/drmyersii/dictionary.js#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
+    "webpack": "^1.13.1"
+  }
+}
