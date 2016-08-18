@@ -16,38 +16,38 @@ class Dictionary {
     }
 
     get(key) {
-        let index = pairs.keys.indexOf(key);
+        let index = _(this).pairs.keys.indexOf(key);
 
-        return index > -1 ? pairs.values[index] : undefined;
+        return index > -1 ? _(this).pairs.values[index] : undefined;
     }
 
     getAll() {
         let groups = [];
 
-        for (let i = 0; i < pairs.keys.length; ++i)
+        for (let i = 0; i < _(this).pairs.keys.length; ++i)
         {
-            groups.push([ pairs.keys[i], pairs.values[i] ]);
+            groups.push([ _(this).pairs.keys[i], _(this).pairs.values[i] ]);
         }
 
         return groups;
     }
 
     set(key, value) {
-        let index = pairs.keys.indexOf(key);
+        let index = _(this).pairs.keys.indexOf(key);
 
         if (index > -1)
         {
-            pairs.values[index] = value;
+            _(this).pairs.values[index] = value;
         }
         else
         {
-            pairs.keys.push(key);
-            pairs.values.push(value);
+            _(this).pairs.keys.push(key);
+            _(this).pairs.values.push(value);
         }
     }
 
     containsKey(key) {
-        let index = pairs.keys.indexOf(key);
+        let index = _(this).pairs.keys.indexOf(key);
 
         return index > -1;
     }
@@ -70,13 +70,13 @@ class Dictionary {
             return sortingFunc(x, y);
         });
 
-        pairs.keys = [];
-        pairs.values = [];
+        _(this).pairs.keys = [];
+        _(this).pairs.values = [];
 
         for (let group of groups)
         {
-            pairs.keys.push(group[0]);
-            pairs.values.push(group[1]);
+            _(this).pairs.keys.push(group[0]);
+            _(this).pairs.values.push(group[1]);
         }
     }
 
