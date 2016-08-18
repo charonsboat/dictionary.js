@@ -214,7 +214,7 @@ Vagrant.configure(2) do |config|
         args_node_version = "node"
 
         # @param: global node packages to install
-        args_node_packages = "npm pm2 webpack"
+        args_node_packages = "npm pm2 webpack mocha"
 
         # call node provisioner
         config.vm.provision :shell, privileged: false, path: "#{scripts_url}/node", args: [ args_node_version, args_node_packages ]
