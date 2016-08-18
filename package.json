@@ -1,5 +1,5 @@
 {
-  "name": "@drmyersii/dictionary.js",
+  "name": "@drm2/dictionary.js",
   "version": "0.0.0",
   "description": "A sortable Dictionary data structure for JavaScript (or Node).",
   "main": "index.js",
