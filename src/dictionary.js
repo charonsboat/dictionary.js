@@ -26,7 +26,10 @@ class Dictionary {
 
         for (let i = 0; i < _(this).pairs.keys.length; ++i)
         {
-            groups.push([ _(this).pairs.keys[i], _(this).pairs.values[i] ]);
+            groups.push({
+                key: _(this).pairs.keys[i],
+                value: _(this).pairs.values[i]
+            });
         }
 
         return groups;
@@ -55,28 +58,15 @@ class Dictionary {
     sort(sortingFunc) {
         let groups = this.getAll();
 
-        groups.sort(function (a, b)
-        {
-            let x = {
-                key: a[0],
-                value: a[1]
-            };
-
-            let y = {
-                key: b[0],
-                value: b[1]
-            };
-
-            return sortingFunc(x, y);
-        });
+        groups.sort(sortingFunc);
 
         _(this).pairs.keys = [];
         _(this).pairs.values = [];
 
         for (let group of groups)
         {
-            _(this).pairs.keys.push(group[0]);
-            _(this).pairs.values.push(group[1]);
+            _(this).pairs.keys.push(group.key);
+            _(this).pairs.values.push(group.value);
         }
     }
 
