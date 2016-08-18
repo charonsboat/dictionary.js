@@ -4,7 +4,9 @@
   "description": "A sortable Dictionary data structure for JavaScript (or Node).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "mocha tests",
+    "tests": "npm run build && npm test"
   },
   "repository": {
     "type": "git",
