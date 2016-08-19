@@ -34,7 +34,7 @@ var message = dict.get('hello'); // returns 'world'
 // using the same details from above
 dict.sortByKeyAsc();
 
-var message = dict.getAll();
+var message = dict.data();
 ```
 
 This value of `message` will be:
@@ -59,7 +59,7 @@ dict.sort(function (a, b)
   if (a.key === b.key)
   {
     if (a.value === b.value) return 0;
-    
+
     return a.value < b.value ? -1 : 1;
   }
 
