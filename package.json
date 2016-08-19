@@ -1,12 +1,13 @@
 {
   "name": "@drm2/dictionary.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A sortable Dictionary data structure for JavaScript (or Node).",
-  "main": "index.js",
+  "main": "./dist/dictionary.js",
   "scripts": {
     "build": "webpack",
     "test": "mocha tests",
-    "tests": "npm run build && npm test"
+    "tests": "npm run build && npm test",
+    "deploy": "npm run build && npm test && npm publish"
   },
   "repository": {
     "type": "git",
