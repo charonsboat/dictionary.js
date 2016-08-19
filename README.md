@@ -49,6 +49,8 @@ This value of `message` will be:
 
 ### sorting (implementing a custom function)
 
+The sort method expects a compare function just like `Array.prototype.sort`.
+
 ```javascript
 // using the same details from above
 dict.sort(function (a, b)
