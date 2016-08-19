@@ -54,10 +54,10 @@ describe('dictionary.js - utilities', function ()
 
         var i_count = 0;
 
-        dict.forEach(function (key, value)
+        dict.forEach(function (record, index)
         {
-            expect(key).to.equal(list[i_count].key);
-            expect(value).to.equal(list[i_count].value);
+            expect(record.key).to.equal(list[index].key);
+            expect(record.value).to.equal(list[index].value);
 
             ++i_count;
         });

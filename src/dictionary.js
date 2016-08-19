@@ -191,10 +191,10 @@ class Dictionary {
     forEach(fn) {
         let records = this.data();
 
-        for (let record of records)
+        records.forEach(function (record, index, records)
         {
-            fn(record.key, record.value);
-        }
+            fn(record, index);
+        });
     }
 
     /**
