@@ -131,14 +131,6 @@ class Dictionary {
     }
 
     /**
-     * Alias of data()
-     * TODO: remove at next major update
-     */
-    getAll() {
-        return this.data();
-    }
-
-    /**
      * Utilities ---------------------------------------------------------------
      */
 
@@ -164,14 +156,6 @@ class Dictionary {
         let index = _(this).pairs.values.indexOf(value);
 
         return index > -1;
-    }
-
-    /**
-     * Alias of exists()
-     * TODO: remove at next major update
-     */
-    containsKey(key) {
-        return this.exists(key);
     }
 
     /**
