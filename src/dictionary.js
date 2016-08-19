@@ -20,18 +20,6 @@ class Dictionary {
      */
 
     /**
-     * Returns the value associated with the given key.
-     *
-     * @param  {mixed} key - the identifier used to look up the requested value
-     * @return {mixed}
-     */
-    get(key) {
-        let index = _(this).pairs.keys.indexOf(key);
-
-        return index > -1 ? _(this).pairs.values[index] : undefined;
-    }
-
-    /**
      * Associates (stores) the given value with the given key.
      *
      * @param  {mixed} key - the key where the value should be stored
@@ -52,13 +40,25 @@ class Dictionary {
     }
 
     /**
+     * Returns the value associated with the given key.
+     *
+     * @param  {mixed} key - the identifier used to look up the requested value
+     * @return {mixed}
+     */
+    get(key) {
+        let index = _(this).pairs.keys.indexOf(key);
+
+        return index > -1 ? _(this).pairs.values[index] : undefined;
+    }
+
+    /**
      * Returns the key/value pair stored at the given index or 'undefined' if the index doesn't exist.
      *
      * @param  {int} index - the index of the key/value pair to return
      * @return {object|undefined}
      */
     at(index) {
-        if (_(this).pairs.keys.indexOf(index) === -1) return undefined;
+        if (typeof _(this).pairs.keys[index] === 'undefined') return undefined;
 
         return {
             key: _(this).pairs.keys[index],
@@ -76,7 +76,7 @@ class Dictionary {
         let index = is_index ? key : _(this).pairs.keys.indexOf(key);
 
         _(this).pairs.keys.splice(index, 1);
-        _(this).pairs.keys.splice(index, 1);
+        _(this).pairs.values.splice(index, 1);
     }
 
     /**
@@ -94,20 +94,20 @@ class Dictionary {
 
             return {
                 key: _(this).pairs.keys.pop(),
-                value: _(this).pairs.keys.pop()
+                value: _(this).pairs.values.pop()
             };
         }
 
         let index = is_index ? key : _(this).pairs.keys.indexOf(key);
 
-        let key = _(this).pairs.keys[index];
-        let value = _(this).pairs.values[index];
+        let rkey = _(this).pairs.keys[index];
+        let rvalue = _(this).pairs.values[index];
 
         this.remove(index, true);
 
         return {
-            key: key,
-            value: value
+            key: rkey,
+            value: rvalue
         };
     }
 
