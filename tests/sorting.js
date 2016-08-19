@@ -1,5 +1,4 @@
-var chai = require('chai');
-var expect = chai.expect;
+var expect = require('chai').expect;
 var Dict = require('./../dist/dictionary');
 
 var list = [
@@ -40,29 +39,9 @@ var fillDictionary = function (dict, list)
     }
 }
 
-describe('dictionary.js', function ()
+describe('dictionary.js - sorting', function ()
 {
-    it('should be able to add and retrieve dictionary items', function ()
-    {
-        var dict = new Dict();
-
-        fillDictionary(dict, list);
-
-        expect(dict.get('hello')).to.equal('world');
-        expect(dict.get('animal')).to.equal('kingdom');
-        expect(dict.get('rick')).to.equal('morty');
-    });
-
-    it('should be able to retrieve the entire list of objects', function ()
-    {
-        var dict = new Dict();
-
-        fillDictionary(dict, list);
-
-        expect(dict.getAll()).to.deep.equal(list);
-    });
-
-    it('should be able to sort dictionary by keys in ascending order', function ()
+    it('.sortByKeyAsc() should be able to sort dictionary by keys in ascending order', function ()
     {
         var dict = new Dict();
 
@@ -73,7 +52,7 @@ describe('dictionary.js', function ()
         expect(dict.getAll()).to.deep.equal(list_sortedByKeyAsc);
     });
 
-    it('should be able to sort dictionary by keys in descending order', function ()
+    it('.sortByKeyDesc() should be able to sort dictionary by keys in descending order', function ()
     {
         var dict = new Dict();
 
@@ -84,7 +63,7 @@ describe('dictionary.js', function ()
         expect(dict.getAll()).to.deep.equal(list_sortedByKeyDesc);
     });
 
-    it('should be able to sort dictionary by values in ascending order', function ()
+    it('.sortByValueAsc() should be able to sort dictionary by values in ascending order', function ()
     {
         var dict = new Dict();
 
@@ -95,7 +74,7 @@ describe('dictionary.js', function ()
         expect(dict.getAll()).to.deep.equal(list_sortedByValueAsc);
     });
 
-    it('should be able to sort dictionary by values in descending order', function ()
+    it('.sortByValueDesc() should be able to sort dictionary by values in descending order', function ()
     {
         var dict = new Dict();
 
