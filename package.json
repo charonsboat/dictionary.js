@@ -1,6 +1,6 @@
 {
   "name": "@drm2/dictionary.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A sortable Dictionary data structure for JavaScript (or Node).",
   "main": "./dist/dictionary.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drmyersii/dictionary.js.git"
+    "url": "git+https://github.com/drm2/dictionary.js.git"
   },
   "keywords": [
     "sortable",
@@ -22,9 +22,9 @@
   "author": "David R. Myers II <davidrmyersii@gmail.com> (https://drm2.co)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drmyersii/dictionary.js/issues"
+    "url": "https://github.com/drm2/dictionary.js/issues"
   },
-  "homepage": "https://github.com/drmyersii/dictionary.js#readme",
+  "homepage": "https://github.com/drm2/dictionary.js#readme",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
